@@ -1,0 +1,18 @@
+from discord_webhook import DiscordWebhook, DiscordEmbed
+import time
+
+webhook = DiscordWebhook(url='ADD_WEBHOOK_HERE')
+
+embed = DiscordEmbed(title="gay", description="this will send every 15 minutes automaticly", color='03b2f8')
+
+embed.set_author(name='gay sender', url='https://github.com/6stitch9/6stitch9')
+
+webhook.content = 'ur gay'
+
+webhook.add_embed(embed)
+
+while True:
+    time.sleep(900)
+
+
+    response = webhook.execute()
